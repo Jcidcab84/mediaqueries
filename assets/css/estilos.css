@@ -4,7 +4,8 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    
+    /* width:100%;
+    height: 100%;    */
 }
 
 
@@ -27,8 +28,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:10px;
-    
+    gap:10px;    
 }
 
 .logo span{
@@ -43,11 +43,10 @@ body{
     display:none;
 }
 
-.nav ul{
+/* .nav ul{
     display: flex;
     flex-direction: row;
-    gap: 50px;
-   
+    gap: 50px; 
 }
 
 .nav ul li{
@@ -59,9 +58,8 @@ body{
 .nav ul li a{
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
-    
-}
+    font-size: 1.2rem;    
+} */
 
 /*formulario*/
 .formulario{
@@ -69,12 +67,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; 
     height: 100%;
     background-color: lightgray;
     grid-area: formulario;
-    padding:0 50px 50px;
+    padding:0 40px 30px;
 }
+
 .formulario select{
     width:80%;
     border: none;
@@ -85,7 +84,7 @@ main{
     grid-area: contenido;
     width: 100%;
     height: 100%;
-    
+    padding:0 40px 30px;  
 }
 .cajas{
     display: grid;
@@ -93,7 +92,6 @@ main{
     gap:3%;
     margin:3%;   
 }
-
 main .item{
     display:flex;
     flex-direction: column;
@@ -106,7 +104,7 @@ main .item{
 
 .item img{
     width: 80%;
-    padding-bottom: 3%;
+    
 }
 
 .item button{
@@ -138,13 +136,14 @@ main .item{
 
 /* footer */
 footer{
+    width: 100%; 
     background-color: dodgerblue;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top:1% ;
+    padding:1%  40px  0px;
     grid-area: footer;
     }
 
@@ -156,54 +155,108 @@ footer{
 }
 
 
-/* responsive */
+
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+/* media query para telefono */
 
 @media (max-width: 576px){
   
     .grid-container{
+        display:grid;
         grid-template-areas: 
         "header"
         "formulario"
         "contenido"
-        "footer"
-        ;
+        "contenido"
+        "footer";
     }
 
    /* header */
-
     .logo{
         padding: 5px;
     }
-    
-    .logo span{
+     .logo span{
         font-size: 1rem;
     }
     .logo  h1{
         font-size: 1rem;
     }
-
-    
     .hamburguesa{
         display: block;
-        padding-right: 20px;
+        padding-right: 10px;
         font-size: 2rem;
     }
-    .header nav{
-       display: none;
-     
+    .header .menu nav{
+       display: none; 
+    }
+    /* contenido */
+    .cajas{  
+        grid-template-columns: 1fr;    
+    }
+ 
+    .cajas .dos{
+        display: none;
+    }
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Media query para tablet */
+
+@media screen and
+(min-device-width: 576px) and (max-device-width: 992px){
+
+    .grid-container{
+        grid-template-areas: 
+        "header header header"
+        "formulario contenido contenido"
+        "footer footer footer";
+
+        grid-template-rows: 1fr 5fr 1fr;
+    } 
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    header .hamburguesa{
+        display: none;
+    }
+    .nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5px; 
     }
     
+    .nav ul li{
+        list-style-type: none;
+        color: white; 
+        padding-right: 5px;
+    }
+    
+    .nav ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 0.8rem;
+        list-style-type: none;    
+    }
 
     /* formulario */
-
-
-   
-
-    
-
-    .cajas{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+    .formulario{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
     }
 }
