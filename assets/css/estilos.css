@@ -1,18 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
-    /* width:100%;
-    height: 100%;    */
 }
 
-
 /* header */
-.header{
-    /* width: 100%;
-    height:100%; */
+.header {
     color: white;
     background-color: dodgerblue;
     grid-area: header;
@@ -20,94 +14,88 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* padding:0 50px; */
 }
 
-.logo{
-    display:flex;
+.logo {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:10px;    
+    gap: 10px;
 }
 
-.logo span{
+.logo span {
     font-size: 3rem;
 }
 
-.logo h1{
-    font-size: 2rem;   
+.logo h1 {
+    font-size: 2rem;
 }
 
-.hamburguesa{
-    display:none;
+.hamburguesa {
+    display: none;
 }
 
-.nav ul{
+.nav ul {
     display: flex;
     flex-direction: row;
-    gap: 5px; 
+    gap: 5px;
 }
 
-.nav ul li{
+.nav ul li {
     list-style-type: none;
-    color: white; 
-    /* padding-right: 100px; */
+    color: white;
 }
 
-.nav ul li a{
+.nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;    
+    font-size: 1.2rem;
 }
 
 /*formulario*/
-.formulario{
+.formulario {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* width: 100%; 
-    height: 100%; */
     background-color: lightgray;
     grid-area: formulario;
-    /* padding:0 40px 30px; */
+    padding-bottom: 30px;
 }
 
-.formulario select{
-    width:80%;
+.formulario select {
+    width: 80%;
     border: none;
 }
 
 /* Contenido */
-main{
+main {
     grid-area: contenido;
-    /* width: 100%;
-    height: 100%; */
-    /* padding:0 40px 30px;   */
 }
-.cajas{
+
+.cajas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:3%;
-    margin:3%;   
+    gap: 3%;
+    margin: 3%;
 }
-main .item{
-    display:flex;
+
+main .item {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:5px;
+    gap: 5px;
     border: 1px lightgray solid;
     padding: 7% 0;
 }
 
-.item img{
+.item img {
     width: 80%;
-    
 }
 
-.item button{
+.item button {
     background-color: dodgerblue;
     color: white;
     padding: 3%;
@@ -115,7 +103,7 @@ main .item{
     border-radius: 15%;
 }
 
-.paginas{
+.paginas {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -123,83 +111,78 @@ main .item{
     padding-bottom: 1%;
 }
 
-.pagina{
+.pagina {
     padding: 1rem;
     font-size: 1rem;
-    border:1px lightgray solid ;
+    border: 1px lightgray solid;
 }
 
-.paginas div a{
+.paginas div a {
     color: dodgerblue;
     text-decoration: none;
 }
 
 /* footer */
-footer{
-    /* width: 100%;  */
-    background-color: dodgerblue;
+footer {
+    background-color: darkblue;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding:1%  40px  0px; */
     grid-area: footer;
-    }
+}
 
-.simbolos{
+.simbolos {
     display: flex;
     flex-direction: row;
     gap: 5px;
     font-size: 2rem;
 }
 
-
-
-
 /* --------------------------------------------------------------------------- */
-
-
-
 
 /* media query para telefono */
 
-@media (max-width: 576px){
-  
-    .grid-container{
-        display:grid;
-        grid-template-areas: 
-        "header"
-        "formulario"
-        "contenido"
-        "footer";
-        grid-template-rows:50px 85px auto 1fr ;
-        grid-template-columns:1fr;
+@media (max-width: 576px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "formulario"
+            "contenido"
+            "footer";
+        grid-template-rows: 50px 85px auto 1fr;
+        grid-template-columns: 1fr;
     }
 
-   /* header */
-    .header{
-        display:flex;
+    /* header */
+    .header {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .logo{
+    .logo {
         padding: 5px;
     }
-     .logo span{
+
+    .logo span {
         font-size: 2rem;
     }
-    .logo  h1{
+
+    .logo h1 {
         font-size: 1.5rem;
     }
-    .hamburguesa{
+
+    .hamburguesa {
         display: block;
         padding-right: 30px;
         font-size: 2rem;
     }
-    .header .menu nav{
-       display: none; 
+
+    .header .menu nav {
+        display: none;
     }
 
     /* formulario */
@@ -207,98 +190,129 @@ footer{
         padding-top: -30px;
     }
 
-
     /* contenido */
-    .cajas{  
+    .cajas {
         grid-template-columns: 1fr;
-        margin-top:50px ;    
+        margin-top: 50px;
     }
- 
-    .cajas .dos{
+
+    .cajas .dos {
         display: none;
     }
-
-    /* footer{
-        margin-top: 10px;
-        padding-top: 10px;
-    } */
-    
 }
-
-
-
 
 
 /* -------------------------------------------------------------------------- */
 
-
 /* Media query para tablet */
 
-@media screen and
-(min-device-width: 576px) and (max-device-width: 992px){
-
-
-
-    .grid-container{
-        grid-template-areas: 
-        "header header"
-        "formulario contenido "
-        "footer footer ";
-
-        grid-template-rows: 40px 500px 1fr ;
+@media screen and (min-device-width: 576px) and (max-device-width: 992px) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
         grid-template-columns: 1fr 3fr;
-    } 
-    header{
+        grid-template-areas:
+            "header header"
+            "formulario contenido "
+            "footer footer ";
+    }
+
+    header {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
     }
 
-    header .hamburguesa{
+    header .hamburguesa {
         display: none;
     }
 
-    .nav{
+    .nav {
         display: block;
     }
 
-    .nav ul{
+    .nav ul {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        gap: 5px; 
+        gap: 5px;
     }
-    
-    .nav ul li{
+
+    .nav ul li {
         list-style-type: none;
-        color: white; 
+        color: white;
         padding-right: 50px;
     }
-    
-    .nav ul li a{
+
+    .nav ul li a {
         text-decoration: none;
         color: white;
         font-size: 0.8rem;
         list-style-type: none;
-        /* padding-right: 50px;     */
     }
 
     /* formulario */
-    .formulario{
+    .formulario {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
     }
 
-      /* contenido */
-      .cajas{  
+    /* contenido */
+
+    .cajas {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        /* margin-top:50px ;     */
-        display: flex;
+        padding-top: 50px;
     }
 
-    .cajastablet{
+    .cajas .cajastablet {
         display: none;
     }
+}
 
+/* ------------------------------------------------------------------ */
+
+/* Media query para desktop */
+
+@media (min-width: 992px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto 80%;
+        grid-template-rows: auto auto 20%;
+        grid-template-areas:
+            "header formulario"
+            "header contenido"
+            "footer contenido";
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0%;
+        margin: 0%;
+        gap:30px
+    }
+
+    .nav ul li a {
+        font-size: 1.2rem;
+       
+    }
 }
